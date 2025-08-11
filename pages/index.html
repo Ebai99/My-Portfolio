@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebai Baron Portfolio</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio</h1>
+      <div class="menu-icon" onclick="openMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <nav>
+        <div class="close-icon" onclick="closeMenu()">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <a href="index.html">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-overlay" onclick="closeMenu()"></div>
+    </header>
+    <main>
+      <section id="about" class="about">
+        <div class="profile-container">
+          <p class="overlay"></p>
+          <img src="../assets/images/profile-pic2.jpg" alt="Ebai Baron" />
+        </div>
+        <article>
+          <!--<h2>Welcome</h2>-->
+          <p>Hello! I'm <span class="name highlight">Ebai Baron</span></p>
+          <p>
+            A passionate developer with a keen interest in creating
+            <span class="highlight">innovative</span> and
+            <span class="highlight">highly secured</span> digital solutions.
+          </p>
+          <p>
+            Feel free to explore my projects and get in touch if you have any
+            questions or opportunities!
+          </p>
+        </article>
+      </section>
+      <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+          <div class="project">
+            <h3>Project 1</h3>
+            <div class="project-image">
+              <a href="https://github.com/Ebai99/Heritage-University-Website">
+                <img src="../assets/images/project1.jpg" alt="Project 1" />
+              </a>
+            </div>
+            <p>The Heritage University Institute school website</p>
+            <h3>Tools</h3>
+            <p>HTML, CSS</p>
+          </div>
+          <div class="project">
+            <h3>Project 2</h3>
+            <div class="project-image">
+              <a href="">
+                <img src="../assets/images/project2.jpg" alt="Project 2" />
+              </a>
+            </div>
+            <p>Prolac sarl, a yogurt manufacturing company</p>
+            <h3>Tools</h3>
+            <p>HTML, CSS</p>
+          </div>
+          <div class="project">
+            <h3>Project 3</h3>
+            <div class="project-image">
+              <a href="https://github.com/Ebai99/Beth-Media-Assignment1">
+                <img src="../assets/images/project3.jpg" alt="Project 3" />
+              </a>
+            </div>
+            <p>Student Management Platform with Python</p>
+            <h3>Tools</h3>
+            <p>Python</p>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p>Here are some of the skills I've acquired:</p>
+        <div class="skill-container">
+          <div class="spine"></div>
+          <div class="emphasis">HTML</div>
+          <div class="empty-space"></div>
+          <div class="empty-space"></div>
+          <div class="emphasis">CSS</div>
+          <div class="emphasis">JavaScript</div>
+          <div class="empty-space"></div>
+          <div class="empty-space"></div>
+          <div class="emphasis">Python</div>
+          <div class="emphasis">PHP</div>
+          <div class="empty-space"></div>
+          <div class="empty-space"></div>
+          <div class="emphasis">Microsoft Word</div>
+        </div>
+      </section>
+      <section id="services" class="services">
+        <h2>Services</h2>
+        <p>Here are some of the services I offer:</p>
+        <ul>
+          <li>Web Development</li>
+          <li>UI/UX Design</li>
+          <li>Consulting</li>
+          <li>Content Creation</li>
+          <li>SEO Optimization</li>
+        </ul>
+      </section>
+      <section class="contact" id="contact">
+        <div>
+          <h2>Get in Touch</h2>
+          <p>Feel free to reach out!</p>
+        </div>
+
+        <form action="">
+          <input type="text" name="name" id="name" placeholder="Name" /><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+          /><br />
+          <textarea name="message" id="message" placeholder="Message"></textarea
+          ><br />
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <h2>Socials</h2>
+      <div class="socials">
+        <a href="https://github.com/Ebai99" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://linkedin.com/in/ebai-baron" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://twitter.com/EbaiBaron" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+      </div>
+      <p>&copy; 2023 Ebai Baron. All rights reserved.</p>
+    </footer>
+    <script src="../script/main.js"></script>
+  </body>
+</html>

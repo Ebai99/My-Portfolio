@@ -1,0 +1,463 @@
+:root {
+  --primary-color: #b37c00;
+  --secondary-color: #4593c7;
+  --secondary-color-light: #4593c75e;
+  --body-color: #f9f9f9;
+  --font-family: "Poppins", sans-serif;
+  --line-height: 1.5;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0 10%;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  color: var(--body-color);
+  background-image: url("../assets/images/wallhaven-horizon-starry-night.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 900;
+  color: var(--secondary-color);
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 5rem;
+}
+
+.fa-solid {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.fa-xmark {
+  font: 1.75rem;
+}
+
+.fa-solid:hover {
+  color: var(--primary-color);
+}
+
+.menu-icon,
+.close-icon {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+nav a:hover::before {
+  display: block;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  margin-bottom: 10rem;
+}
+
+section.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+section.about .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 300px;
+  padding: 2rem;
+  border: 5px solid var(--secondary-color);
+  position: relative;
+}
+
+section.about .profile-container img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+section.about .profile-container p.overlay {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: var(--secondary-color-light);
+  border-radius: 50%;
+}
+
+section.about article {
+  padding: 0 2rem;
+  height: fit-content;
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+section.about article p span.highlight {
+  color: var(--primary-color);
+}
+
+section.about article p span.name {
+  font-size: 3rem;
+  font-family: "Great Vibes", cursive;
+  font-weight: 600;
+}
+
+section.projects .project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1%;
+}
+
+.project-container .project {
+  flex: 1 1 calc(30% - 2%);
+  margin: 1%;
+  padding: 1rem;
+  border: none;
+  background-color: var(--secondary-color-light);
+  backdrop-filter: blur(15px);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.project-container .project:hover {
+  transform: scale(1.05);
+}
+
+h3 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.profile-container .project .project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.skill-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+.skill-container div {
+  width: 49%;
+  padding: 0.5em 0;
+  border: none;
+}
+
+.skill-container div.empty-space {
+  opacity: 0;
+}
+
+.skill-container div.emphasis {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(15px);
+  background-color: var(--secondary-color-light);
+}
+
+.skill-container .spine {
+  position: absolute;
+  width: 2%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  z-index: 1;
+}
+
+section.contact {
+  padding: 1em;
+  border: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color-light);
+  backdrop-filter: blur(15px);
+  gap: 1rem;
+}
+
+.contact div {
+  padding: 1em;
+}
+
+.contact h2 {
+  color: black;
+}
+
+.contact form {
+  padding: 1em;
+  width: min(90%, 600px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact form input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  color: var(--body-color);
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+}
+
+.contact form input:hover {
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+.contact form textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  color: var(--body-color);
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact form textarea:hover {
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+.contact form button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  color: var(--body-color);
+  background-color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+  background-color: var(--primary-color);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--secondary-color-light);
+  backdrop-filter: blur(15px);
+}
+
+footer h2 {
+  color: black;
+}
+
+footer .socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1000px) {
+  .menu-icon,
+  .close-icon {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(90%, 350px);
+    height: 100vh;
+    padding: 1rem;
+    background-color: var(--secondary-color-light);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: block;
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav.open ~ .nav-overlay {
+    display: block;
+  }
+
+  nav.closed {
+    right: -100%;
+  }
+
+  section.about {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  section.about article {
+    text-align: center;
+  }
+
+  section.contact {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0 3%;
+    font-size: 1.25rem;
+  }
+
+  .project-container .project {
+    flex: 1 1 calc(100% - 2%);
+    margin: 1%;
+  }
+
+  .contact form input {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  nav a {
+    font-size: 2rem;
+  }
+
+  .fa-solid {
+    font-size: 2rem;
+  }
+
+  .profile-container {
+    height: 280px;
+    width: 280px;
+    padding: 1rem;
+  }
+
+  section.about .profile-container img {
+    height: 260px;
+    width: 260px;
+  }
+
+  section.about .profile-container p.overlay {
+    width: 260px;
+    height: 260px;
+  }
+
+  section.about article p {
+    font-size: 1.25rem;
+  }
+
+  .project-container .project {
+    flex: 1 1 calc(100% - 2%);
+    margin: 1%;
+    padding: 0.5rem;
+  }
+}
