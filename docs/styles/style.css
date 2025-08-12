@@ -11,10 +11,13 @@ html {
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: var(--font-family);
   font-size: 1.5rem;
   color: var(--body-color);
@@ -41,7 +44,7 @@ header {
   padding: 0 10%;
   background-color: rgba(0, 0, 15, 1);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  height: 9.5rem;
+  height: 8rem;
   margin: 0;
 }
 
@@ -145,7 +148,7 @@ section#about h2 {
 }
 
 section#about {
-  padding-top: 7rem;
+  padding-top: 9rem;
 }
 
 .about {
@@ -159,9 +162,8 @@ section#about {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  width: 300px;
-  padding: 2rem;
+  height: 350px;
+  width: 400px;
   border: 5px solid var(--secondary-color);
   position: relative;
 }
@@ -207,7 +209,6 @@ section.projects .project-container {
 .project-container .project {
   flex: 1 1 calc(30% - 2%);
   padding: 1rem;
-  border: none;
   background-color: var(--secondary-color-light);
   backdrop-filter: blur(15px);
   transform: scale(1);
@@ -221,7 +222,7 @@ section.projects .project-container {
 h3 {
   font-size: 2rem;
   color: black;
-  margin-bottom: 0.5rem;
+  margin: 0.25rem 0;
 }
 
 .profile-container .project .project-image {
@@ -381,6 +382,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
   padding: 1rem 10%;
   background-color: rgba(0, 0, 15, 1);
   backdrop-filter: blur(15px);
@@ -420,7 +422,11 @@ footer .contact-info a:hover {
   }
 
   header {
-    height: 7.5rem;
+    height: 6rem;
+  }
+
+  header h1 {
+    font-size: 4rem;
   }
 
   nav {
@@ -448,6 +454,14 @@ footer .contact-info a:hover {
   nav.closed {
     top: -500%;
   }
+
+  section#about {
+    padding-top: 7rem;
+  }
+
+  section {
+    padding-top: 7rem;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -466,14 +480,17 @@ footer .contact-info a:hover {
 }
 
 @media (max-width: 700px) {
-  main,
-  footer {
+  main {
     padding: 0 3%;
     font-size: 1.25rem;
   }
 
+  .about article p span.name {
+    font-size: 2.5rem;
+  }
+
   section.projects .project-container {
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .project-container .project {
@@ -482,7 +499,18 @@ footer .contact-info a:hover {
     pointer-events: none;
   }
 
-  .contact form input {
+  .contact form input,
+  .contact form textarea,
+  .contact form button {
+    font-size: 1.25rem;
+  }
+
+  footer {
+    padding: 1rem 3%;
+    font-size: 1.25;
+  }
+
+  footer .contact-info a {
     font-size: 1.25rem;
   }
 }
@@ -493,7 +521,7 @@ footer .contact-info a:hover {
   }
 
   header {
-    height: 6rem;
+    height: 5.5rem;
   }
 
   header h1 {
@@ -502,6 +530,18 @@ footer .contact-info a:hover {
 
   section#about h2 {
     font-size: 3rem;
+  }
+
+  section#about {
+    padding-top: 6.5rem;
+  }
+
+  .about article p span.name {
+    font-size: 2rem;
+  }
+
+  section {
+    padding-top: 6.5rem;
   }
 
   h2 {
@@ -517,8 +557,8 @@ footer .contact-info a:hover {
   }
 
   .about .profile-container {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 90vw;
     padding: 1rem;
   }
 
@@ -532,16 +572,18 @@ footer .contact-info a:hover {
     height: 200px;
   }
 
-  .about article p {
-    font-size: 1.25rem;
-  }
-
   .project-container .project {
     flex: 1 1 calc(100% - 2%);
     padding: 0.5rem;
   }
 
-  section.services ul {
-    padding: 0;
+  .contact form input,
+  .contact form button,
+  .contact form textarea {
+    font-size: 1rem;
+  }
+
+  footer .contact-info a {
+    font-size: 1rem;
   }
 }
