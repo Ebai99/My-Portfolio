@@ -44,6 +44,7 @@ header {
   padding: 0 10%;
   background-color: rgba(0, 0, 15, 0.8);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  height: 10rem;
 }
 
 header h1 {
