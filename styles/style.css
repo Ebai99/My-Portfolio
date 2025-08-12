@@ -44,7 +44,7 @@ header h1 {
 }
 
 .fa-solid {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--secondary-color);
   cursor: pointer;
@@ -215,6 +215,10 @@ h3 {
   object-position: center;
 }
 
+.project-image img:hover {
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
 .skill-container {
   position: relative;
   display: flex;
@@ -254,6 +258,22 @@ h3 {
   );
   border: none;
   z-index: 1;
+}
+
+section.services ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+section.services ul li {
+  list-style: none;
+  padding: 1rem;
+  background-color: var(--secondary-color-light);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  width: min(90%, 300px);
 }
 
 section.contact {
@@ -355,7 +375,7 @@ footer .socials {
   color: var(--primary-color);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .menu-icon,
   .close-icon {
     display: block;
@@ -364,20 +384,19 @@ footer .socials {
   nav {
     flex-direction: column;
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: min(90%, 350px);
-    height: 100vh;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: fit-content;
     padding: 1rem;
     background-color: var(--secondary-color-light);
     backdrop-filter: blur(15px);
     z-index: 1000;
-    transition: right 0.3s ease;
-    display: block;
+    transition: top 0.3s ease;
   }
 
   nav.open {
-    right: 0;
+    top: 0;
   }
 
   nav.open ~ .nav-overlay {
@@ -385,9 +404,11 @@ footer .socials {
   }
 
   nav.closed {
-    right: -100%;
+    top: -100%;
   }
+}
 
+@media (max-width: 1000px) {
   section.about {
     flex-direction: column;
     justify-content: center;
@@ -411,6 +432,7 @@ footer .socials {
   .project-container .project {
     flex: 1 1 calc(100% - 2%);
     margin: 1%;
+    pointer-events: none;
   }
 
   .contact form input {
@@ -432,7 +454,7 @@ footer .socials {
   }
 
   .fa-solid {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .profile-container {
