@@ -13,6 +13,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
   font-size: 1.5rem;
@@ -21,6 +22,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -45,6 +47,7 @@ header {
   background-color: rgba(0, 0, 15, 0.8);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   height: 10rem;
+  margin: 0;
 }
 
 header h1 {
@@ -84,7 +87,7 @@ nav a {
   font-family: "Great Vibes", cursive;
   font-size: 2.5rem;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-out;
 }
 
 nav a::after {
@@ -94,7 +97,7 @@ nav a::after {
   height: 2px;
   background-color: var(--primary-color);
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out;
 }
 
 nav a:hover {
@@ -152,7 +155,7 @@ section#about h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 300px;
   width: 300px;
   padding: 2rem;
   border: 5px solid var(--secondary-color);
@@ -194,18 +197,17 @@ section.projects .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1%;
+  gap: 1rem;
 }
 
 .project-container .project {
   flex: 1 1 calc(30% - 2%);
-  margin: 1%;
   padding: 1rem;
   border: none;
   background-color: var(--secondary-color-light);
   backdrop-filter: blur(15px);
   transform: scale(1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out;
 }
 
 .project-container .project:hover {
@@ -281,6 +283,7 @@ section.services ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -363,7 +366,7 @@ section.services ul li {
   background-color: var(--secondary-color);
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-out;
 }
 
 .contact form button:hover {
@@ -378,6 +381,7 @@ footer {
   background-color: rgba(0, 0, 15, 0.8);
   backdrop-filter: blur(15px);
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
 
 footer .socials {
@@ -388,7 +392,7 @@ footer .socials {
 .socials a {
   color: var(--secondary-color);
   font-size: 2rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-out;
 }
 
 .socials a:hover {
@@ -411,10 +415,14 @@ footer .contact-info a:hover {
     display: block;
   }
 
+  header {
+    height: 7.5rem;
+  }
+
   nav {
     flex-direction: column;
     position: fixed;
-    top: -300%;
+    top: -500%;
     left: 0;
     width: 100%;
     height: fit-content;
@@ -422,7 +430,7 @@ footer .contact-info a:hover {
     background-color: rgb(0, 0, 15);
     backdrop-filter: blur(15px);
     z-index: 1000;
-    transition: top 0.3s ease;
+    transition: top 0.5s ease-out;
   }
 
   nav.open {
@@ -434,7 +442,7 @@ footer .contact-info a:hover {
   }
 
   nav.closed {
-    top: -300%;
+    top: -500%;
   }
 }
 
@@ -480,8 +488,20 @@ footer .contact-info a:hover {
     font-size: 1rem;
   }
 
+  header {
+    height: 6rem;
+  }
+
   header h1 {
     font-size: 3rem;
+  }
+
+  section#about h2 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
   }
 
   nav a {
@@ -492,20 +512,20 @@ footer .contact-info a:hover {
     font-size: 1.75rem;
   }
 
-  .profile-container {
-    height: 280px;
-    width: 280px;
+  .about .profile-container {
+    height: 200px;
+    width: 200px;
     padding: 1rem;
   }
 
   .about .profile-container img {
-    height: 260px;
-    width: 260px;
+    height: 200px;
+    width: 200px;
   }
 
   .about .profile-container p.overlay {
-    width: 260px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
   }
 
   .about article p {
@@ -514,7 +534,10 @@ footer .contact-info a:hover {
 
   .project-container .project {
     flex: 1 1 calc(100% - 2%);
-    margin: 1%;
     padding: 0.5rem;
+  }
+
+  section.services ul {
+    padding: 0;
   }
 }
