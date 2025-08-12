@@ -126,17 +126,29 @@ main {
 }
 
 section {
-  padding-top: 12rem;
+  padding-top: 9rem;
 }
 
-section.about {
+h2 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+section#about h2 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.about {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
 
-section.about .profile-container {
+.about .profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,7 +159,7 @@ section.about .profile-container {
   position: relative;
 }
 
-section.about .profile-container img {
+.about .profile-container img {
   height: 300px;
   width: 300px;
   border-radius: 50%;
@@ -155,7 +167,7 @@ section.about .profile-container img {
   object-position: center;
 }
 
-section.about .profile-container p.overlay {
+.about .profile-container p.overlay {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -163,23 +175,16 @@ section.about .profile-container p.overlay {
   border-radius: 50%;
 }
 
-section.about article {
+.about article {
   padding: 0 2rem;
   height: fit-content;
 }
 
-h2 {
-  font-size: 3rem;
-  color: var(--secondary-color);
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-section.about article p span.highlight {
+.about article p span.highlight {
   color: var(--primary-color);
 }
 
-section.about article p span.name {
+.about article p span.name {
   font-size: 3rem;
   font-family: "Great Vibes", cursive;
   font-weight: 600;
@@ -289,7 +294,7 @@ section.services ul li {
 }
 
 .contact-us {
-  padding-bottom: 12rem;
+  padding-bottom: 7rem;
 }
 
 .contact {
@@ -434,12 +439,12 @@ footer .contact-info a:hover {
 }
 
 @media (max-width: 1000px) {
-  section.about {
+  .about {
     flex-direction: column;
     justify-content: center;
   }
 
-  section.about article {
+  .about article {
     text-align: center;
   }
 
@@ -493,17 +498,17 @@ footer .contact-info a:hover {
     padding: 1rem;
   }
 
-  section.about .profile-container img {
+  .about .profile-container img {
     height: 260px;
     width: 260px;
   }
 
-  section.about .profile-container p.overlay {
+  .about .profile-container p.overlay {
     width: 260px;
     height: 260px;
   }
 
-  section.about article p {
+  .about article p {
     font-size: 1.25rem;
   }
 
