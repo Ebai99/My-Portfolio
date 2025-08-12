@@ -33,11 +33,11 @@
         <div class="close-icon" onclick="closeMenu()">
           <i class="fa-solid fa-xmark"></i>
         </div>
-        <a href="index.html">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#skills" onclick="closeMenu()">Skills</a>
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
       </nav>
 
       <div class="nav-overlay" onclick="closeMenu()"></div>
@@ -130,24 +130,31 @@
           <li>SEO Optimization</li>
         </ul>
       </section>
-      <section class="contact" id="contact">
-        <div>
-          <h2>Get in Touch</h2>
-          <p>Feel free to reach out!</p>
-        </div>
+      <section class="contact-us" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+          <div>
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out!</p>
+          </div>
 
-        <form action="">
-          <input type="text" name="name" id="name" placeholder="Name" /><br />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-          /><br />
-          <textarea name="message" id="message" placeholder="Message"></textarea
-          ><br />
-          <button type="submit">Send Message</button>
-        </form>
+          <form action="">
+            <input type="text" name="name" id="name" placeholder="Name" /><br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+            /><br />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+            ></textarea
+            ><br />
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
@@ -163,6 +170,10 @@
           ><i class="fa-brands fa-twitter"></i
         ></a>
       </div>
+      <p class="contact-info">
+        Contact:
+        <a href="mailto:ebaibaron99@gmail.com">ebaibaron99@gmail.com</a>
+      </p>
       <p>&copy; 2023 Ebai Baron. All rights reserved.</p>
     </footer>
     <script src="script/main.js"></script>
