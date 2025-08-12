@@ -443,7 +443,7 @@ footer .contact-info a:hover {
     text-align: center;
   }
 
-  section.contact {
+  .contact {
     flex-direction: column;
   }
 }
@@ -453,6 +453,10 @@ footer .contact-info a:hover {
   footer {
     padding: 0 3%;
     font-size: 1.25rem;
+  }
+
+  section.projects .project-container {
+    gap: 2rem;
   }
 
   .project-container .project {
