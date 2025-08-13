@@ -338,6 +338,11 @@ section.services ul li {
   backdrop-filter: blur(15px);
   text-align: center;
   width: min(90%, 300px);
+  transition: box-shadow 0.3s ease-out;
+}
+
+section.services ul li:hover {
+  box-shadow: 0 0 5px var(--secondary-color);
 }
 
 .contact-us {
