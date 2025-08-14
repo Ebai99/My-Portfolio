@@ -7,7 +7,7 @@
   --line-height: 1.5;
 }
 html {
-  font-size: 16px;
+  font-size: 18px;
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
@@ -202,8 +202,9 @@ section#about {
   justify-content: center;
   align-items: center;
   height: 350px;
-  width: 400px;
-  border: 5px solid var(--secondary-color);
+  width: 500px;
+  padding: 1rem;
+  border: 10px solid var(--secondary-color);
   position: relative;
 }
 
@@ -306,6 +307,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5em;
   backdrop-filter: blur(15px);
   background-color: var(--secondary-color-light);
 }
@@ -422,6 +424,13 @@ section.services ul li:hover {
   background-color: var(--primary-color);
 }
 
+.error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: none;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -459,7 +468,7 @@ footer .contact-info a:hover {
   color: var(--primary-color);
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1275px) {
   .menu-icon,
   .close-icon {
     display: block;

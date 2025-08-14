@@ -1,3 +1,11 @@
+// JavaScript to hide the loading screen when the page is fully loaded
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  setTimeout(() => {
+    loader.classList.add("loader-hidden");
+  }, 500); // Optional delay for smoother transition
+});
+
 // Function to open the navigation menu
 function openMenu() {
   const nav = document.querySelector("nav");
@@ -12,10 +20,54 @@ function closeMenu() {
   nav.classList.add("closed");
 }
 
-// JavaScript to hide the loading screen when the page is fully loaded
-window.addEventListener("load", function () {
-  const loader = document.getElementById("loader");
-  setTimeout(() => {
-    loader.classList.add("loader-hidden");
-  }, 500); // Optional delay for smoother transition
+// Form submission
+const form = document.getElementById("contactForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Reset error messages
+  nameError.style.display = "none";
+  emailError.style.display = "none";
+  messageError.style.display = "none";
+
+  // Validate inputs
+  let isValid = true;
+  if (!nameInput.value.trim()) {
+    nameError.style.display = "block";
+    isValid = false;
+  }
+  if (
+    !emailInput.value.trim() ||
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())
+  ) {
+    emailError.style.display = "block";
+    isValid = false;
+  }
+  if (!messageInput.value.trim()) {
+    messageError.style.display = "block";
+    isValid = false;
+  }
+
+  if (isValid) {
+    // Format the message for WhatsApp
+    const name = encodeURIComponent(nameInput.value.trim());
+    const email = encodeURIComponent(emailInput.value.trim());
+    const message = encodeURIComponent(messageInput.value.trim());
+    const whatsappNumber = "+237672815082";
+    const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0A%0AMessage: ${message}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+    // Open WhatsApp link in a new tab
+    window.open(whatsappUrl, "_blank");
+
+    // Reset form
+    form.reset();
+  }
 });
