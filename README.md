@@ -10,4 +10,4 @@
 The objective of this project is show all my cool stuffs to all those who are interested
 
 ### Technologies used
-For tis project, I made use of HTML, CSS and Javascript
+For this project, I made use of HTML, CSS and Javascript
