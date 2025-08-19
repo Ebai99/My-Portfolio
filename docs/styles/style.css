@@ -80,15 +80,22 @@ header {
   top: 0;
   z-index: 998;
   backdrop-filter: blur(15px);
-  padding: 0 10%;
+  padding: 0.25em 10%;
   background-color: rgb(0, 0, 15);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  height: 8rem;
   margin: 0;
 }
 
-header h1 {
+header h1 a {
   font-size: 5rem;
+  text-decoration: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+}
+
+header h1 a:hover {
+  color: var(--primary-color);
 }
 
 .fa-solid {
@@ -96,6 +103,7 @@ header h1 {
   font-weight: 600;
   color: var(--secondary-color);
   cursor: pointer;
+  transition: color 0.3s ease-out;
 }
 
 .fa-xmark {
@@ -184,6 +192,7 @@ h2 {
 section#about h2 {
   text-align: center;
   font-size: 4rem;
+  color: var(--primary-color);
 }
 
 section#about {
@@ -474,11 +483,7 @@ footer .contact-info a:hover {
     display: block;
   }
 
-  header {
-    height: 6rem;
-  }
-
-  header h1 {
+  header h1 a {
     font-size: 4rem;
   }
 
@@ -573,11 +578,7 @@ footer .contact-info a:hover {
     font-size: 1rem;
   }
 
-  header {
-    height: 5.5rem;
-  }
-
-  header h1 {
+  header h1 a {
     font-size: 3rem;
   }
 
