@@ -211,7 +211,7 @@ section#about {
   justify-content: center;
   align-items: center;
   height: 350px;
-  width: 500px;
+  width: min(500px, 90vw);
   padding: 1rem;
   border: 10px solid var(--secondary-color);
   position: relative;
@@ -490,7 +490,7 @@ footer .contact-info a:hover {
   nav {
     flex-direction: column;
     position: fixed;
-    top: -500%;
+    top: -1000%;
     left: 0;
     width: 100%;
     height: fit-content;
@@ -510,7 +510,7 @@ footer .contact-info a:hover {
   }
 
   nav.closed {
-    top: -500%;
+    top: -1000%;
   }
 
   section#about {
@@ -612,7 +612,6 @@ footer .contact-info a:hover {
 
   .about .profile-container {
     height: 250px;
-    width: 90vw;
     padding: 1rem;
   }
 
