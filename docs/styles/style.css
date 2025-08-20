@@ -319,6 +319,12 @@ h3 {
   padding: 0.5em;
   backdrop-filter: blur(15px);
   background-color: var(--secondary-color-light);
+  transform: scale(1);
+  transition: transform 0.3s ease-out;
+}
+
+.skill-container div.emphasis:hover {
+  transform: scale(1.05);
 }
 
 .skill-container .spine {
@@ -349,11 +355,12 @@ section.services ul li {
   backdrop-filter: blur(15px);
   text-align: center;
   width: min(90%, 300px);
-  transition: box-shadow 0.3s ease-out;
+  transform: scale(1);
+  transition: transform 0.3s ease-out;
 }
 
 section.services ul li:hover {
-  box-shadow: 0 0 5px var(--secondary-color);
+  transform: scale(1.05);
 }
 
 .contact-us {
@@ -477,6 +484,37 @@ footer .contact-info a:hover {
   color: var(--primary-color);
 }
 
+/* Slide-in animation classes */
+.hero-content {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 1s ease-out;
+}
+.hero-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+.slide-in-bottom {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
 @media (max-width: 1275px) {
   .menu-icon,
   .close-icon {
@@ -540,7 +578,7 @@ footer .contact-info a:hover {
 @media (max-width: 700px) {
   main {
     padding: 0 3%;
-    font-size: 1.25rem;
+    font-size: 1.055rem;
   }
 
   .about article p span.name {
@@ -560,16 +598,16 @@ footer .contact-info a:hover {
   .contact form input,
   .contact form textarea,
   .contact form button {
-    font-size: 1.25rem;
+    font-size: 1.055rem;
   }
 
   footer {
     padding: 1rem 3%;
-    font-size: 1.25;
+    font-size: 1.055;
   }
 
   footer .contact-info a {
-    font-size: 1.25rem;
+    font-size: 1.055rem;
   }
 }
 
